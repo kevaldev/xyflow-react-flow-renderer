@@ -1,6 +1,6 @@
 {
   "name": "@xyflow/react",
-  "version": "12.0.0-next.12",
+  "version": "12.0.0-next.14",
   "description": "React Flow - A highly customizable React library for building node-based editors and interactive flow charts.",
   "keywords": [
     "react",
@@ -40,8 +40,8 @@
     "directory": "packages/react"
   },
   "scripts": {
-    "dev": "concurrently \"rollup --config node:@xyflow/rollup-config --watch\" pnpm:css-watch",
-    "build": "rollup --config node:@xyflow/rollup-config --environment NODE_ENV:production && npm run css",
+    "dev": "node init && concurrently \"rollup --config node:@xyflow/rollup-config --watch\" pnpm:css-watch",
+    "build": "node init && rollup --config node:@xyflow/rollup-config --environment NODE_ENV:production && npm run css",
     "css": "postcss src/styles/{base,style}.css --config ./../../tooling/postcss-config/ --dir dist ",
     "css-watch": "pnpm css --watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",

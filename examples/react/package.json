@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000 --open --host",
+    "dev": "node init && vite --port 3000 --open --host",
     "serve": "vite serve --port 3000",
-    "build": "vite build",
+    "build": "node init && vite build",
     "test:dev": "cypress open",
     "test": "pnpm test-component && pnpm test-e2e",
     "test-component": "cypress run --component",
